@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050505;
+}
+
+.cube {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515, #00FFFF);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00FFFF;
+    transform: translateZ(-150px);
+    filter: blur(5px);
+    box-shadow: 0 0 120px #00FFFF,
+                0 0 200px #00FFFF,
+                0 0 300px #00FFFF,
+                0 0 400px #00FFFF,
+                0 0 500px #00FFFF;
+}
+
+.cube2 {
+    position: absolute;
+    right: 80%;
+    top: 50px;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+}
+
+.cube2 div span {
+    transform: rotateY(calc(90deg * var(--i))) translateZ(35px);
+    background: linear-gradient(#151515, #0000FF);
+}
+
+.cube2 .top {
+    transform: rotateX(90deg) translateZ(35px);
+}
+
+.cube2 .top::before {
+    transform: translateZ(-100px);
+    background: #0000FF;
+    box-shadow: 0 0 120px #0000FF,
+                0 0 200px #0000FF,
+                0 0 300px #0000FF,
+                0 0 400px #0000FF,
+                0 0 500px #0000FF;
+}
+
+.cube3 {
+    position: absolute;
+    top: 50px;
+    left: 80%;
+}
+
+.cube3 div span {
+    background: linear-gradient(#151515, #C70039);
+}
+
+.cube3 .top::before {
+    background: #C70039;
+    box-shadow: 0 0 120px #C70039,
+                0 0 200px #C70039,
+                0 0 300px #C70039,
+                0 0 400px #C70039,
+                0 0 500px #C70039;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing 3d Cube Animation | Amber Light Effects</title>
+</head>
+<body>
+
+<div class="cube">
+    <div class="top"></div>
+    <div>
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+</div>
+
+<div class="cube cube2">
+    <div class="top"></div>
+    <div>
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+</div>
+
+<div class="cube cube2 cube3">
+    <div class="top"></div>
+    <div>
+        <span style="--i:0"></span>
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+    </div>
+</div>
+
+    
+<script>
+
+
+window.addEventListener("load", e => {
+    setTimeout(() => {
+        document.querySelector(".cube2").style.opacity = "1";
+    }, 5000)
+
+    setTimeout(() => {
+        document.querySelector(".cube3").style.opacity = "1";
+    }, 10000)
+})
+
+
+</script>
+
+
+</body>
+</html>
